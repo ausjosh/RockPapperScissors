@@ -8,46 +8,46 @@ function ran(min,max){
 function computerPlay(){
     const num = ran(1,3)
     if (num === 1)
-        console.log("rock")
+        return("rock")
     else if (num ===2)
-        console.log("papper")
+        return("paper")
     else
-        console.log ("scissors")                 
+        return ("scissors")                 
 }
 //Create Funtion "Player"
 // promt for player to enter choice
 //make choice case-insensitive 
 
 function Player1(){
-    const choice = prompt("rock papper or scissors")
+    const choice = prompt("rock paper or scissors")
 if (choice.toLocaleLowerCase() === "rock")
-    console.log ("you choose rock")
-else if (choice.toLocaleLowerCase() === "papper")
-    console.log ("you choose papper")    
+    return ("rock")
+else if (choice.toLocaleLowerCase() === "paper")
+    return ("paper")    
     else
-    console.log ("you choose scissors")
+    return ("scissors")
 }
 
 // create funtion game play 
 // must take in Player on selection & computer selection
 // return who was the winner 
 
-function gameplay(Player1,computerPlay){
+function gameplay(){
  const comp = computerPlay()
  const play = Player1()
 if (comp === play)
     console.log ("its a draw")
 else if (comp == "rock" && play == "scissors")
-    console.log ("computer wins")
-else if (comp == "scissors" && play == "papper")
-    console.log ("computer wins")
-else if (comp == "papper" && play == "rock")
-    console.log ("computer wins")
+    console.log ("computer choose rock! you Loose")
+else if (comp == "scissors" && play == "paper")
+    console.log ("computer choose scissors! you Loose")
+else if (comp == "paper" && play == "rock")
+    console.log ("computer choose paper! you Loose")
 else if (comp == "scissors" && play == "rock")
     console.log ("you win")
-else if (comp == "papper" && play == "scissors")
+else if (comp == "paper" && play == "scissors")
     console.log ("you win")
-else if (comp == "rock" && play == "papper")
+else if (comp == "rock" && play == "paper")
     console.log ("you win")
 }
 
