@@ -33,22 +33,55 @@ else if (choice.toLocaleLowerCase() === "paper")
 // return who was the winner 
 
 function gameplay(){
- const comp = computerPlay()
- const play = Player1()
-if (comp === play)
-    console.log ("its a draw")
-else if (comp == "rock" && play == "scissors")
-    console.log ("computer choose rock! you Loose")
-else if (comp == "scissors" && play == "paper")
-    console.log ("computer choose scissors! you Loose")
-else if (comp == "paper" && play == "rock")
-    console.log ("computer choose paper! you Loose")
-else if (comp == "scissors" && play == "rock")
-    console.log ("you win")
-else if (comp == "paper" && play == "scissors")
-    console.log ("you win")
-else if (comp == "rock" && play == "paper")
-    console.log ("you win")
+ const playerScore = 0
+ const computerScore = 0
+        
+    for(i =0; i <5; i++){
+        const comp = computerPlay()
+        const play = Player1()
+         
+        if (comp === play){
+            
+         console.log ("this round is a draw");
+        
+        }else if (comp == "rock" && play == "scissors"){
+            
+            computerScore == computerScore+1;
+         console.log ("computer choose rock! you Loose this round")
+        }else if (comp == "scissors" && play == "paper"){
+            
+           computerScore== computerScore+1;
+         console.log ("computer choose scissors! you Loose this round")
+        }else if (comp == "paper" && play == "rock"){
+            
+           computerScore== computerScore+1;
+         console.log ("computer choose paper! you Loose this round")
+        }else if (comp == "scissors" && play == "rock"){
+            
+            playerScore== playerScore+1;
+         console.log ("you win this round")
+        }else if (comp == "paper" && play == "scissors"){
+            
+           playerScore== playerScore+1;
+         console.log ("you win this round")
+        }else if (comp == "rock" && play == "paper"){
+            
+            playerScore== playerScore+1;
+         console.log ("you win this round")
+        
+    }
+    }
+    
+   if (playerScore > computerScore)
+        console.log ("computer score " + computerScore + " your score " + playerScore + " you loose")
+    else
+        console.log ("computer score " + computerScore + " your score " + playerScore +  " you win")    
 }
+// create a funtion fiveRound
+//create a round counter
+// have a loop run that starts a new round at the end of the old one
+//
+//have a count of who won the round
+// have the game stop when the counter gets to 5
+// alert who won 
 
-//random comment
